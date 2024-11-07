@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Admin Panel Dashboard">
+    <title>Admin Panel</title>
+
+    <!-- Bootstrap CSS and JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bundle includes Popper -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <!-- Correct DataTables CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light">
+        <div class="container-fluid">
+            <!-- offcanvas trigger -->
+            <button class="navbar-toggler me-2" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                Open Offcanvas
+            </button>
+            <div class="offcanvas offcanvas-start sidebar-nav bg-dark text-dark" tabindex="-1" id="offcanvasExample"
+                aria-labelledby="offcanvas">
+                <div class="offcanvas-header">
+                    
+                    <h5 class="offcanvas-title" id="offcanvas">Offcanvas Example</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <a class="navbar-brand fw-bold text-uppercase me-auto text-dark justify-content-center" href="#">FRONTENDFUNN</a>
+                <img src="/assets/img3.jpg" alt="Image" height="200px" width="200px">
+
+                <div class="collapse navbar-collapse ms-auto" id="navbarSupportedContent">
+                    <!-- Search Form aligned to the right -->
+                    <form class="d-flex ms-auto">
+                        <div class="input-group my-3 my-lg-0">
+                            <input type="text" class="form-control" placeholder="Search" aria-label="Search"
+                                aria-describedby="button-addon2">
+                            <button class="btn btn-primary" type="button" id="button-addon2">
+                                <i class="bi bi-search"></i> <!-- Search Icon -->
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- User Icon Dropdown Menu -->
+                    <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="bi bi-person-circle"></i> <!-- User Icon -->
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <!-- Offcanvas -->
+
+                <div class="text-muted small fw-bold text-uppercase px-3 d-flex align-items-center bd-left-dark">CORE</div>
+                <li>
+                    <a href="#" class="nav-link fw-bold px-3 d-flex align-items-center text-dark">
+                        <span class="me-2"><i class="bi bi-speedometer2"></i></span>
+                        <span class="my-lg-0">Dashboard</span>
+                    </a>
+                </li>
+                <li class=" my-4">
+                    <hr class="dropdown-divider" />
+                </li>
+                <li>
+                    <div class="text-muted small fw-bold text-uppercase px-3 d-flex align-items-center">Interface</div>
+                </li>
+                <li>
+                    <a class="nav-link px-3 sidebar-link-dark" data-bs-toggle="collapse" href="#collapseExample"
+                        role="button" aria-expanded="true" aria-controls="collapseExample">
+                        <span class="me-2"><i class="bi bi-layout-split"></i></span>
+                        <span>layouts</span>
+                        <span class="left-icon ms-auto">
+                            <i class="bi bi-chevron-down"></i>
+                        </span>
+                    </a>
+                    <div class="collapse" id="collapseExample">
+                        <div>
+                            <ul class="navbar-nav ps-3">
+                                <li>
+                                    <a href="#" class="nav-link px-3"></a>
+                                    <span class="me-2"><i class="bi bi-layout-split"></i></span>
+                                    <span>nested links</span>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </div>
+        </div>
+
+    </nav>
+    <!-- End of Navbar -->
+    <main class="mt-3 pt-3 left-dark me-1"style="margin-left: -10px;">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 fw-bold fs-3 ">
+                    Dashboard
+                </div>
+                <div class="row">
+                    <div class="col-md-3 mb-3">
+                        <div class="card text-bg-success">
+                            <div class="card-header">Header</div>
+                            <div class="card-body">
+                                <h5 class="card-title">Primary card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="card text-bg-danger">
+                            <div class="card-header">Header</div>
+                            <div class="card-body">
+                                <h5 class="card-title">Primary card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="card text-bg-warning">
+                            <div class="card-header">Header</div>
+                            <div class="card-body">
+                                <h5 class="card-title">Primary card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="card text-bg-primary">
+                            <div class="card-header">Header</div>
+                            <div class="card-body">
+                                <h5 class="card-title">Primary card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header">
+                                Charts
+                            </div>
+                            <div class="card-body">
+                                <canvas class="charts" width="400" height="200"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header">
+                                Charts
+                            </div>
+                            <div class="card-body">
+                                <canvas class="charts" width="400" height="200"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row py-3">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header py-3">
+                                Data Tables
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <div class="card bg-default shadow draggable">
+                                        <div class="card-header bg-transparent border-0">
+                                            <h3 class="text-white mb-0">Dark table</h3>
+                                        </div>
+                                        <div class="table-responsive">
+                                            <table class="table align-items-center table-dark table-flush">
+                                                <thead class="thead-dark">
+                                                    <tr>
+                                                        <th scope="col" class="sort" data-sort="name">Project</th>
+                                                        <th scope="col" class="sort" data-sort="budget">Budget</th>
+                                                        <th scope="col" class="sort" data-sort="status">Status</th>
+                                                        <th scope="col">Users</th>
+                                                        <th scope="col" class="sort" data-sort="completion">Completion
+                                                        </th>
+                                                        <th scope="col"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="list">
+                                                    <tr>
+                                                        <th scope="row">
+                                                            <div class="media align-items-center">
+                                                                <a href="#" class="avatar rounded-circle mr-3">
+                                                                    <img alt="Image placeholder"
+                                                                        src="https://demos.creative-tim.com/argon-dashboard/assets-old/img/theme/bootstrap.jpg" height="30px">
+                                                                </a>
+                                                                <div class="media-body">
+                                                                    <span class="name mb-0 text-sm">Argon Design
+                                                                        System</span>
+                                                                </div>
+                                                            </div>
+                                                        </th>
+                                                        <td class="budget">
+                                                            $2500 USD
+                                                        </td>
+                                                        <td>
+                                                            <span class="badge badge-dot mr-4">
+                                                                <i class="bg-warning"></i>
+                                                                <span class="status">pending</span>
+                                                            </span>
+                                                        </td>
+                                                        <td>
+                                                            <div class="avatar-group">
+                                                                <a href="#" class="avatar avatar-sm rounded-circle"
+                                                                    data-toggle="tooltip"
+                                                                    data-original-title="Ryan Tompson">
+                                                                    <img alt="Image placeholder"
+                                                                        src="https://demos.creative-tim.com/argon-dashboard/assets-old/img/theme/team-1.jpg"height="30px">
+                                                                </a>
+                                                                <a href="#" class="avatar avatar-sm rounded-circle"
+                                                                    data-toggle="tooltip"
+                                                                    data-original-title="Romina Hadid">
+                                                                    <img alt="Image placeholder"
+                                                                        src="https://demos.creative-tim.com/argon-dashboard/assets-old/img/theme/team-2.jpg" height="30px">
+                                                                </a>
+                                                                <a href="#" class="avatar avatar-sm rounded-circle"
+                                                                    data-toggle="tooltip"
+                                                                    data-original-title="Alexander Smith">
+                                                                    <img alt="Image placeholder"
+                                                                        src="https://demos.creative-tim.com/argon-dashboard/assets-old/img/theme/team-3.jpg"height="30px">
+                                                                </a>
+                                                                <a href="#" class="avatar avatar-sm rounded-circle"
+                                                                    data-toggle="tooltip"
+                                                                    data-original-title="Jessica Doe">
+                                                                    <img alt="Image placeholder"
+                                                                        src="https://demos.creative-tim.com/argon-dashboard/assets-old/img/theme/team-4.jpg"height="30px">
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <span class="completion mr-2">60%</span>
+                                                                <div>
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar bg-warning"
+                                                                            role="progressbar" aria-valuenow="60"
+                                                                            aria-valuemin="0" aria-valuemax="100"
+                                                                            style="width: 60%;"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="text-right">
+                                                            <div class="dropdown">
+                                                                <a class="btn btn-sm btn-icon-only text-light" href="#"
+                                                                    role="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false">
+                                                                    <i class="fas fa-ellipsis-v"></i>
+                                                                </a>
+                                                                <div
+                                                                    class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                                                    <a class="dropdown-item" href="#">Action</a>
+                                                                    <a class="dropdown-item" href="#">Another action</a>
+                                                                    <a class="dropdown-item" href="#">Something else
+                                                                        here</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">
+                                                            <div class="media align-items-center">
+                                                                <a href="#" class="avatar rounded-circle mr-3">
+                                                                    <img alt="Image placeholder"
+                                                                        src="https://demos.creative-tim.com/argon-dashboard/assets-old/img/theme/angular.jpg"height="30px">
+                                                                </a>
+                                                                <div class="media-body">
+                                                                    <span class="name mb-0 text-sm">Angular Now UI Kit
+                                                                        PRO</span>
+                                                                </div>
+                                                            </div>
+                                                        </th>
+                                                        <td class="budget">
+                                                            $1800 USD
+                                                        </td>
+                                                        <td>
+                                                            <span class="badge badge-dot mr-4">
+                                                                <i class="bg-success"></i>
+                                                                <span class="status">completed</span>
+                                                            </span>
+                                                        </td>
+                                                        <td>
+                                                            <div class="avatar-group">
+                                                                <a href="#" class="avatar avatar-sm rounded-circle"
+                                                                    data-toggle="tooltip"
+                                                                    data-original-title="Ryan Tompson">
+                                                                    <img alt="Image placeholder"
+                                                                        src="https://demos.creative-tim.com/argon-dashboard/assets-old/img/theme/team-1.jpg"height="30px">
+                                                                </a>
+                                                                <a href="#" class="avatar avatar-sm rounded-circle"
+                                                                    data-toggle="tooltip"
+                                                                    data-original-title="Romina Hadid">
+                                                                    <img alt="Image placeholder"
+                                                                        src="https://demos.creative-tim.com/argon-dashboard/assets-old/img/theme/team-2.jpg"height="30px">
+                                                                </a>
+                                                                <a href="#" class="avatar avatar-sm rounded-circle"
+                                                                    data-toggle="tooltip"
+                                                                    data-original-title="Alexander Smith">
+                                                                    <img alt="Image placeholder"
+                                                                        src="https://demos.creative-tim.com/argon-dashboard/assets-old/img/theme/team-3.jpg"height="30px">
+                                                                </a>
+                                                                <a href="#" class="avatar avatar-sm rounded-circle"
+                                                                    data-toggle="tooltip"
+                                                                    data-original-title="Jessica Doe">
+                                                                    <img alt="Image placeholder"
+                                                                        src="https://demos.creative-tim.com/argon-dashboard/assets-old/img/theme/team-4.jpg"height="30px">
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <span class="completion mr-2">100%</span>
+                                                                <div>
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar bg-success"
+                                                                            role="progressbar" aria-valuenow="100"
+                                                                            aria-valuemin="0" aria-valuemax="100"
+                                                                            style="width: 100%;"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="text-right">
+                                                            <div class="dropdown">
+                                                                <a class="btn btn-sm btn-icon-only text-light" href="#"
+                                                                    role="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false">
+                                                                    <i class="fas fa-ellipsis-v"></i>
+                                                                </a>
+                                                                <div
+                                                                    class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                                                    <a class="dropdown-item" href="#">Action</a>
+                                                                    <a class="dropdown-item" href="#">Another action</a>
+                                                                    <a class="dropdown-item" href="#">Something else
+                                                                        here</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">
+                                                            <div class="media align-items-center">
+                                                                <a href="#" class="avatar rounded-circle mr-3">
+                                                                    <img alt="Image placeholder"
+                                                                        src="https://demos.creative-tim.com/argon-dashboard/assets-old/img/theme/sketch.jpg"height="30px">
+                                                                </a>
+                                                                <div class="media-body">
+                                                                    <span class="name mb-0 text-sm">Black
+                                                                        Dashboard</span>
+                                                                </div>
+                                                            </div>
+                                                        </th>
+                                                        <td class="budget">
+                                                            $3150 USD
+                                                        </td>
+                                                        <td>
+                                                            <span class="badge badge-dot mr-4">
+                                                                <i class="bg-danger"></i>
+                                                                <span class="status">delayed</span>
+                                                            </span>
+                                                        </td>
+                                                        <td>
+                                                            <div class="avatar-group">
+                                                                <a href="#" class="avatar avatar-sm rounded-circle"
+                                                                    data-toggle="tooltip"
+                                                                    data-original-title="Ryan Tompson">
+                                                                    <img alt="Image placeholder"
+                                                                        src="https://demos.creative-tim.com/argon-dashboard/assets-old/img/theme/team-1.jpg"height="30px">
+                                                                </a>
+                                                                <a href="#" class="avatar avatar-sm rounded-circle"
+                                                                    data-toggle="tooltip"
+                                                                    data-original-title="Romina Hadid">
+                                                                    <img alt="Image placeholder"
+                                                                        src="https://demos.creative-tim.com/argon-dashboard/assets-old/img/theme/team-2.jpg"height="30px">
+                                                                </a>
+                                                                <a href="#" class="avatar avatar-sm rounded-circle"
+                                                                    data-toggle="tooltip"
+                                                                    data-original-title="Alexander Smith">
+                                                                    <img alt="Image placeholder"
+                                                                        src="https://demos.creative-tim.com/argon-dashboard/assets-old/img/theme/team-3.jpg"height="30px">
+                                                                </a>
+                                                                <a href="#" class="avatar avatar-sm rounded-circle"
+                                                                    data-toggle="tooltip"
+                                                                    data-original-title="Jessica Doe">
+                                                                    <img alt="Image placeholder"
+                                                                        src="https://demos.creative-tim.com/argon-dashboard/assets-old/img/theme/team-4.jpg"height="30px">
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <span class="completion mr-2">72%</span>
+                                                                <div>
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar bg-danger"
+                                                                            role="progressbar" aria-valuenow="72"
+                                                                            aria-valuemin="0" aria-valuemax="100"
+                                                                            style="width: 72%;"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="text-right">
+                                                            <div class="dropdown">
+                                                                <a class="btn btn-sm btn-icon-only text-light" href="#"
+                                                                    role="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false">
+                                                                    <i class="fas fa-ellipsis-v"></i>
+                                                                </a>
+                                                                <div
+                                                                    class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                                                    <a class="dropdown-item" href="#">Action</a>
+                                                                    <a class="dropdown-item" href="#">Another action</a>
+                                                                    <a class="dropdown-item" href="#">Something else
+                                                                        here</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">
+                                                            <div class="media align-items-center">
+                                                                <a href="#" class="avatar rounded-circle mr-3">
+                                                                    <img alt="Image placeholder"
+                                                                        src="https://demos.creative-tim.com/argon-dashboard/assets-old/img/theme/react.jpg"height="30px">
+                                                                </a>
+                                                                <div class="media-body">
+                                                                    <span class="name mb-0 text-sm">React Material
+                                                                        Dashboard</span>
+                                                                </div>
+                                                            </div>
+                                                        </th>
+                                                        <td class="budget">
+                                                            $4400 USD
+                                                        </td>
+                                                        <td>
+                                                            <span class="badge badge-dot mr-4">
+                                                                <i class="bg-info"></i>
+                                                                <span class="status">on schedule</span>
+                                                            </span>
+                                                        </td>
+                                                        <td>
+                                                            <div class="avatar-group">
+                                                                <a href="#" class="avatar avatar-sm rounded-circle"
+                                                                    data-toggle="tooltip"
+                                                                    data-original-title="Ryan Tompson">
+                                                                    <img alt="Image placeholder"
+                                                                        src="https://demos.creative-tim.com/argon-dashboard/assets-old/img/theme/team-1.jpg"height="30px">
+                                                                </a>
+                                                                <a href="#" class="avatar avatar-sm rounded-circle"
+                                                                    data-toggle="tooltip"
+                                                                    data-original-title="Romina Hadid">
+                                                                    <img alt="Image placeholder"
+                                                                        src="https://demos.creative-tim.com/argon-dashboard/assets-old/img/theme/team-2.jpg"height="30px">
+                                                                </a>
+                                                                <a href="#" class="avatar avatar-sm rounded-circle"
+                                                                    data-toggle="tooltip"
+                                                                    data-original-title="Alexander Smith">
+                                                                    <img alt="Image placeholder"
+                                                                        src="https://demos.creative-tim.com/argon-dashboard/assets-old/img/theme/team-3.jpg" height="30px">
+                                                                </a>
+                                                                <a href="#" class="avatar avatar-sm rounded-circle"
+                                                                    data-toggle="tooltip"
+                                                                    data-original-title="Jessica Doe">
+                                                                    <img alt="Image placeholder"
+                                                                        src="https://demos.creative-tim.com/argon-dashboard/assets-old/img/theme/team-4.jpg" height="30px">
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <span class="completion mr-2">90%</span>
+                                                                <div>
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar bg-info"
+                                                                            role="progressbar" aria-valuenow="90"
+                                                                            aria-valuemin="0" aria-valuemax="100"
+                                                                            style="width: 90%;"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="text-right">
+                                                            <div class="dropdown">
+                                                                <a class="btn btn-sm btn-icon-only text-light" href="#"
+                                                                    role="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false">
+                                                                    <i class="fas fa-ellipsis-v"></i>
+                                                                </a>
+                                                                <div
+                                                                    class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                                                    <a class="dropdown-item" href="#">Action</a>
+                                                                    <a class="dropdown-item" href="#">Another action</a>
+                                                                    <a class="dropdown-item" href="#">Something else
+                                                                        here</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">
+                                                            <div class="media align-items-center">
+                                                                <a href="#" class="avatar rounded-circle mr-3">
+                                                                    <img alt="Image placeholder"
+                                                                        src="https://demos.creative-tim.com/argon-dashboard/assets-old/img/theme/vue.jpg"height="30px">
+                                                                </a>
+                                                                <div class="media-body">
+                                                                    <span class="name mb-0 text-sm">Vue Paper UI Kit
+                                                                        PRO</span>
+                                                                </div>
+                                                            </div>
+                                                        </th>
+                                                        <td class="budget">
+                                                            $2200 USD
+                                                        </td>
+                                                        <td>
+                                                            <span class="badge badge-dot mr-4">
+                                                                <i class="bg-success"></i>
+                                                                <span class="status">completed</span>
+                                                            </span>
+                                                        </td>
+                                                        <td>
+                                                            <div class="avatar-group">
+                                                                <a href="#" class="avatar avatar-sm rounded-circle"
+                                                                    data-toggle="tooltip"
+                                                                    data-original-title="Ryan Tompson">
+                                                                    <img alt="Image placeholder"
+                                                                        src="https://demos.creative-tim.com/argon-dashboard/assets-old/img/theme/team-1.jpg"height="30px">
+                                                                </a>
+                                                                <a href="#" class="avatar avatar-sm rounded-circle"
+                                                                    data-toggle="tooltip"
+                                                                    data-original-title="Romina Hadid">
+                                                                    <img alt="Image placeholder"
+                                                                        src="https://demos.creative-tim.com/argon-dashboard/assets-old/img/theme/team-2.jpg"height="30px">
+                                                                </a>
+                                                                <a href="#" class="avatar avatar-sm rounded-circle"
+                                                                    data-toggle="tooltip"
+                                                                    data-original-title="Alexander Smith">
+                                                                    <img alt="Image placeholder"
+                                                                        src="https://demos.creative-tim.com/argon-dashboard/assets-old/img/theme/team-3.jpg"height="30px">
+                                                                </a>
+                                                                <a href="#" class="avatar avatar-sm rounded-circle"
+                                                                    data-toggle="tooltip"
+                                                                    data-original-title="Jessica Doe">
+                                                                    <img alt="Image placeholder"
+                                                                        src="https://demos.creative-tim.com/argon-dashboard/assets-old/img/theme/team-4.jpg" height="30px">
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <span class="completion mr-2">100%</span>
+                                                                <div>
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar bg-success"
+                                                                            role="progressbar" aria-valuenow="100"
+                                                                            aria-valuemin="0" aria-valuemax="100"
+                                                                            style="width: 100%;"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="text-right">
+                                                            <div class="dropdown">
+                                                                <a class="btn btn-sm btn-icon-only text-light" href="#"
+                                                                    role="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false">
+                                                                    <i class="fas fa-ellipsis-v"></i>
+                                                                </a>
+                                                                <div
+                                                                    class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                                                    <a class="dropdown-item" href="#">Action</a>
+                                                                    <a class="dropdown-item" href="#">Another action</a>
+                                                                    <a class="dropdown-item" href="#">Something else
+                                                                        here</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+    </main>
+    <!-- Collapse content (Search Form and Dropdown) -->
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery -->
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script> <!-- DataTables JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.2/dist/chart.min.js"></script> <!-- Chart.js -->
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>
